@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "harness",
+  "key": {
+    "#": "minecraft:blue_wool",
+    "G": "minecraft:glass",
+    "L": "minecraft:leather"
+  },
+  "pattern": [
+    "LLL",
+    "G#G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:blue_harness",
+    "components": {
+      "enchantable": {
+        "value": 1
+      },
+      "minecraft:lore": [
+        {
+          "text": "Enchantable",
+          "color": "#2b2b2b"
+        }
+      ]
+    }
+  }
+}

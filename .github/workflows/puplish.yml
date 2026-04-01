@@ -1,0 +1,52 @@
+name: Publish Datapack
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+
+      - name: Create Datapack zip
+        run: |
+          zip -r "Wind Boost Enchantment.zip" . -x "*.git*" ".github/*"
+
+      - name: Publish to Modrinth
+        uses: cloudnode-pro/modrinth-publish@v2.3.2
+        with:
+          # Modrinth Token
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          
+          # Project ID
+          project: geljgW9V
+          
+          # The version number (from tag, e.g., v1.1)
+          version: "${{ github.ref_name }}"
+          
+          # The title of the version on Modrinth
+          name: "${{ github.ref_name }}"
+
+          # 'release', 'beta', or 'alpha'
+          channel: release
+
+          # List of files here
+          files: |-
+            Wind Boost Enchantment.zip
+          
+          # Loaders (e.g. fabric, neoforge, minecraft (resourcepacks), datapack (datapacks))
+          loaders: |-
+            datapack
+          
+          # Game Version (e.g. 1.21.11, 26.1-snapshot-1)
+          game-versions: |-
+            1.21.11
+            26.1
+            
