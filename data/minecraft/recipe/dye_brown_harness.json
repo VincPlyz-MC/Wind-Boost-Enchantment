@@ -24,6 +24,17 @@
     "minecraft:brown_dye"
   ],
   "result": {
-    "id": "minecraft:brown_harness"
+    "id": "minecraft:brown_harness",
+    "components": {
+      "enchantable": {
+        "value": 1
+      },
+      "minecraft:lore": [
+        {
+          "text": "Enchantable",
+          "color": "#2b2b2b"
+        }
+      ]
+    }
   }
 }

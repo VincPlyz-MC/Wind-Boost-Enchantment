@@ -24,6 +24,17 @@
     "minecraft:yellow_dye"
   ],
   "result": {
-    "id": "minecraft:yellow_harness"
+    "id": "minecraft:yellow_harness",
+    "components": {
+      "enchantable": {
+        "value": 1
+      },
+      "minecraft:lore": [
+        {
+          "text": "Enchantable",
+          "color": "#2b2b2b"
+        }
+      ]
+    }
   }
 }

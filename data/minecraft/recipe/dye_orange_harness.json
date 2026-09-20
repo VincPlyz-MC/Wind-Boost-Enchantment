@@ -24,6 +24,17 @@
     "minecraft:orange_dye"
   ],
   "result": {
-    "id": "minecraft:orange_harness"
+    "id": "minecraft:orange_harness",
+    "components": {
+      "enchantable": {
+        "value": 1
+      },
+      "minecraft:lore": [
+        {
+          "text": "Enchantable",
+          "color": "#2b2b2b"
+        }
+      ]
+    }
   }
 }

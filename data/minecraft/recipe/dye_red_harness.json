@@ -24,6 +24,17 @@
     "minecraft:red_dye"
   ],
   "result": {
-    "id": "minecraft:red_harness"
+    "id": "minecraft:red_harness",
+    "components": {
+      "enchantable": {
+        "value": 1
+      },
+      "minecraft:lore": [
+        {
+          "text": "Enchantable",
+          "color": "#2b2b2b"
+        }
+      ]
+    }
   }
 }
